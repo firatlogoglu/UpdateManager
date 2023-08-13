@@ -21,9 +21,12 @@ namespace UpdateManager
 
             try
             {
-                ServicePointManager.Expect100Continue = true;
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
-                var newVersion = new WebClient().DownloadString(urlVersion);
+                WebClient webclient = new WebClient();
+                WebRequest.DefaultWebProxy = null;
+                webclient.Proxy = null;
+                var newVersion = webclient.DownloadString(urlVersion);
+
                 string nwVrsn = newVersion.Replace(".", "");
                 string crntVrsn = ProductVersion.Replace(".", "");
                 if (Convert.ToInt32(nwVrsn) > Convert.ToInt32(crntVrsn))

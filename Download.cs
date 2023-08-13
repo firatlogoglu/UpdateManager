@@ -9,9 +9,11 @@ namespace UpdateManager
     {
         public static void DownloadUpdates(string urlDownload, string path, AsyncCompletedEventHandler WebDownloadFileCompleted, DownloadProgressChangedEventHandler WebDownloadProgressChanged)
         {
-            ServicePointManager.Expect100Continue = true;
             ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;
             WebClient webclient = new WebClient();
+            WebRequest.DefaultWebProxy = null;
+            webclient.Proxy = null;
+
             webclient.DownloadFileCompleted += WebDownloadFileCompleted;
             webclient.DownloadProgressChanged += WebDownloadProgressChanged;
             webclient.DownloadFileAsync(new Uri(urlDownload), path);
