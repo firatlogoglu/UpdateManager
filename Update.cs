@@ -5,7 +5,7 @@ namespace UpdateManager
 {
     public class Update
     {
-        public static bool Check(string ProductVersion, bool Is64BitProcess, string urlVersion, string urlgithub, string SetupFileName, string StartupPath, out string NewVersion, out string urlDownload, out string path)
+        public static bool Check(string ProductVersion, bool Is64BitProcess, string urlVersion, string urlgithub, string SetupFileName, string UserDownloadFolder, out string NewVersion, out string urlDownload, out string path)
         {
             string fileName;
             string bit;
@@ -33,7 +33,7 @@ namespace UpdateManager
                 {
                     urlDownload = string.Format("{0}v{1}/{2}_v{1}_{3}.msi", urlgithub, newVersion, SetupFileName, bit);
                     fileName = string.Format("{0}_v{1}_{2}.msi", SetupFileName, newVersion, bit);
-                    path = StartupPath + "\\" + fileName;
+                    path = UserDownloadFolder + "\\" + fileName;
                     NewVersion = newVersion;
                     return true;
                 }
