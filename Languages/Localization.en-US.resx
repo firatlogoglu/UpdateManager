@@ -142,7 +142,7 @@
     <value>&amp;Install Updates</value>
   </data>
   <data name="LastVersion" xml:space="preserve">
-    <value>Last Version:</value>
+    <value>Latest Version:</value>
   </data>
   <data name="LatestVersionNotDetected" xml:space="preserve">
     <value>Latest Version Not Detected</value>

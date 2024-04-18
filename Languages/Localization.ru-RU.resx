@@ -118,51 +118,51 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <data name="CheckUpdates" xml:space="preserve">
-    <value>&amp;Check For Updates</value>
+    <value>Проверьте обновления</value>
   </data>
   <data name="CurrentVersion" xml:space="preserve">
-    <value>Current Version:</value>
+    <value>Текущая версия:</value>
   </data>
   <data name="DirectDownload" xml:space="preserve">
-    <value>&amp;Direct Download</value>
+    <value>Прямая Загрузка</value>
   </data>
   <data name="Downloaded" xml:space="preserve">
-    <value>Downloaded.</value>
+    <value>Скачано.</value>
   </data>
   <data name="Downloading" xml:space="preserve">
-    <value>Downloading...</value>
+    <value>Загрузка...</value>
   </data>
   <data name="DownloadUpdates" xml:space="preserve">
-    <value>&amp;Download Updates</value>
+    <value>Обновить загрузки</value>
   </data>
   <data name="ERROR_2" xml:space="preserve">
-    <value>ERROR:</value>
+    <value>ОШИБКА:</value>
   </data>
   <data name="InstallUpdates" xml:space="preserve">
-    <value>&amp;Install Updates</value>
+    <value>Установить обновления</value>
   </data>
   <data name="LastVersion" xml:space="preserve">
-    <value>Latest Version:</value>
+    <value>Последняя версия:</value>
   </data>
   <data name="LatestVersionNotDetected" xml:space="preserve">
-    <value>Latest Version Not Detected</value>
+    <value>Последняя версия не обнаружена</value>
   </data>
   <data name="lblANewVersionAva" xml:space="preserve">
-    <value>A New Version is Available.</value>
+    <value>Новая версия доступна.</value>
   </data>
   <data name="lblANewVersionAva2" xml:space="preserve">
-    <value>Do you want to Update?</value>
+    <value>Вы хотите обновить?</value>
   </data>
   <data name="NoNewVersion" xml:space="preserve">
-    <value>The version is up to date.</value>
+    <value>Эта версия является актуальной.</value>
   </data>
   <data name="OpenFolder" xml:space="preserve">
-    <value>&amp;Show in folder</value>
+    <value>Показать в папке</value>
   </data>
   <data name="TotalSize" xml:space="preserve">
-    <value>Total Size:</value>
+    <value>Общий размер:</value>
   </data>
   <data name="UpdateManager" xml:space="preserve">
-    <value>Update Manager</value>
+    <value>Менеджер обновлений</value>
   </data>
 </root>
