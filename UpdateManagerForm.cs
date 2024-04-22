@@ -93,6 +93,7 @@ namespace UpdateManager
             // 
             // progressBar
             // 
+            this.progressBar.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.progressBar.Location = new System.Drawing.Point(12, 197);
             this.progressBar.Name = "progressBar";
             this.progressBar.Size = new System.Drawing.Size(251, 23);
@@ -100,6 +101,7 @@ namespace UpdateManager
             // 
             // lblStatus
             // 
+            this.lblStatus.Anchor = System.Windows.Forms.AnchorStyles.Left;
             this.lblStatus.AutoSize = true;
             this.lblStatus.Location = new System.Drawing.Point(8, 227);
             this.lblStatus.Name = "lblStatus";
@@ -121,6 +123,8 @@ namespace UpdateManager
             // 
             // lnkLblDirectDownload
             // 
+            this.lnkLblDirectDownload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.lnkLblDirectDownload.AutoSize = true;
             this.lnkLblDirectDownload.Enabled = false;
             this.lnkLblDirectDownload.Location = new System.Drawing.Point(175, 130);
@@ -144,6 +148,7 @@ namespace UpdateManager
             // 
             // lnkLblOpenFolder
             // 
+            this.lnkLblOpenFolder.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
             this.lnkLblOpenFolder.AutoSize = true;
             this.lnkLblOpenFolder.Location = new System.Drawing.Point(8, 249);
             this.lnkLblOpenFolder.Name = "lnkLblOpenFolder";
