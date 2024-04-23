@@ -70,6 +70,11 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Localization.resx</DependentUpon>
     </Compile>
+    <Compile Include="Languages\Localization.de-DE.Designer.cs">
+      <DependentUpon>Localization.de-DE.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
     <Compile Include="Languages\Localization.en-GB.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -100,6 +105,10 @@
     <None Include="README.md" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Languages\Localization.de-DE.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Localization.de-DE.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Languages\Localization.en-GB.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Localization.en-GB.Designer.cs</LastGenOutput>
