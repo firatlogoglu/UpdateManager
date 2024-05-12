@@ -97,6 +97,15 @@ namespace UpdateManager.Languages {
         }
         
         /// <summary>
+        ///   İndirilen dosya doğrulanmadı. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string DownloadedFileDontTrue {
+            get {
+                return ResourceManager.GetString("DownloadedFileDontTrue", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   İndiriliyor... benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string Downloading {
@@ -111,6 +120,15 @@ namespace UpdateManager.Languages {
         internal static string DownloadUpdates {
             get {
                 return ResourceManager.GetString("DownloadUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Hata benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Error {
+            get {
+                return ResourceManager.GetString("Error", resourceCulture);
             }
         }
         
@@ -201,6 +219,15 @@ namespace UpdateManager.Languages {
         internal static string UpdateManager {
             get {
                 return ResourceManager.GetString("UpdateManager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Doğrulama dosyası indirilemedi. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string VerificationFileNo {
+            get {
+                return ResourceManager.GetString("VerificationFileNo", resourceCulture);
             }
         }
     }

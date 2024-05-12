@@ -129,11 +129,17 @@
   <data name="Downloaded" xml:space="preserve">
     <value>Téléchargé.</value>
   </data>
+  <data name="DownloadedFileDontTrue" xml:space="preserve">
+    <value>Le fichier téléchargé n'a pas été vérifié.</value>
+  </data>
   <data name="Downloading" xml:space="preserve">
     <value>Téléchargement...</value>
   </data>
   <data name="DownloadUpdates" xml:space="preserve">
     <value>Télécharger les Mises à Jour</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Erreur</value>
   </data>
   <data name="ERROR_2" xml:space="preserve">
     <value>ERREUR:</value>
@@ -164,5 +170,8 @@
   </data>
   <data name="UpdateManager" xml:space="preserve">
     <value>Gestionnaire de Mise à Jour</value>
+  </data>
+  <data name="VerificationFileNo" xml:space="preserve">
+    <value>Le fichier de vérification n'a pas pu être téléchargé.</value>
   </data>
 </root>

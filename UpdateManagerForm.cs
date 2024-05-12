@@ -26,15 +26,17 @@ namespace UpdateManager
         private string UrlGitHubReleases;
         private string urlDownload;
         private string UrlVersion;
+        private string UrlSHA256;
         private string path;
         private double FileSize;
         private double Percentage;
-        public UpdateManagerForm(string urlVersion, string urlGitHubReleases)
+        public UpdateManagerForm(string urlVersion, string urlGitHubReleases, string urlSHA256)
         {
             InitializeComponent();
             lblStatus.Text = "";
             UrlVersion = urlVersion;
             UrlGitHubReleases = urlGitHubReleases;
+            UrlSHA256 = urlSHA256;
             Lang();
         }
 
@@ -123,7 +125,7 @@ namespace UpdateManager
             // 
             // lnkLblDirectDownload
             // 
-            this.lnkLblDirectDownload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            this.lnkLblDirectDownload.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left)
             | System.Windows.Forms.AnchorStyles.Right)));
             this.lnkLblDirectDownload.AutoSize = true;
             this.lnkLblDirectDownload.Enabled = false;
@@ -266,19 +268,43 @@ namespace UpdateManager
 
         private void WebDownloadFileCompleted(object sender, AsyncCompletedEventArgs e)
         {
-            if (e.Error != null)
+            try
             {
-                MessageBox.Show(e.Error.Message);
-                btnDownloadUpdates.Enabled = true;
+                if (e.Error != null)
+                {
+                    MessageBox.Show(e.Error.Message);
+                    btnDownloadUpdates.Enabled = true;
+                }
+                else
+                {
+                    lblStatus.Text = Localization.Downloaded + " " + "100%" + " " + Localization.TotalSize + $" {string.Format("{0:0.##} KB", FileSize / Percentage)}";
+                    if (Hash.CheckHash(UrlSHA256, path))
+                    {
+                        lnkLblOpenFolder.Text = path;
+                        lnkLblOpenFolder.Visible = true;
+                        btnDownloadUpdates.Enabled = false;
+                        btnInstallUpdates.Enabled = true;
+                    }
+                    else
+                    {
+                        MessageBox.Show(Localization.DownloadedFileDontTrue + "\n\n" + path, Localization.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
+                        lnkLblOpenFolder.Text = path;
+                        lnkLblOpenFolder.Visible = true;
+                        btnDownloadUpdates.Enabled = false;
+                        btnInstallUpdates.Enabled = true;
+                    }
+
+                }
             }
-            else
+            catch (Exception ex)
             {
-                lblStatus.Text = Localization.Downloaded + " " + "100%" + " " + Localization.TotalSize + $" {string.Format("{0:0.##} KB", FileSize / Percentage)}";
+                MessageBox.Show(Localization.VerificationFileNo + "\n\n" + ex.Message, Localization.Error, MessageBoxButtons.OK, MessageBoxIcon.Error);
                 lnkLblOpenFolder.Text = path;
                 lnkLblOpenFolder.Visible = true;
                 btnDownloadUpdates.Enabled = false;
                 btnInstallUpdates.Enabled = true;
             }
+
         }
 
         private void btnInstallUpdates_Click(object sender, EventArgs e)

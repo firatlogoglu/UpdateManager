@@ -129,11 +129,17 @@
   <data name="Downloaded" xml:space="preserve">
     <value>Downloaded.</value>
   </data>
+  <data name="DownloadedFileDontTrue" xml:space="preserve">
+    <value>The downloaded file has not been verified.</value>
+  </data>
   <data name="Downloading" xml:space="preserve">
     <value>Downloading...</value>
   </data>
   <data name="DownloadUpdates" xml:space="preserve">
     <value>&amp;Download Updates</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Error</value>
   </data>
   <data name="ERROR_2" xml:space="preserve">
     <value>ERROR:</value>
@@ -164,5 +170,8 @@
   </data>
   <data name="UpdateManager" xml:space="preserve">
     <value>Update Manager</value>
+  </data>
+  <data name="VerificationFileNo" xml:space="preserve">
+    <value>The verification file could not be downloaded.</value>
   </data>
 </root>

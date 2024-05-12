@@ -129,11 +129,17 @@
   <data name="Downloaded" xml:space="preserve">
     <value>İndirildi.</value>
   </data>
+  <data name="DownloadedFileDontTrue" xml:space="preserve">
+    <value>İndirilen dosya doğrulanmadı.</value>
+  </data>
   <data name="Downloading" xml:space="preserve">
     <value>İndiriliyor...</value>
   </data>
   <data name="DownloadUpdates" xml:space="preserve">
     <value>Güncellemeleri &amp;İndir</value>
+  </data>
+  <data name="Error" xml:space="preserve">
+    <value>Hata</value>
   </data>
   <data name="ERROR_2" xml:space="preserve">
     <value>HATA:</value>
@@ -164,5 +170,8 @@
   </data>
   <data name="UpdateManager" xml:space="preserve">
     <value>Güncelleme Yöneticisi</value>
+  </data>
+  <data name="VerificationFileNo" xml:space="preserve">
+    <value>Doğrulama dosyası indirilemedi.</value>
   </data>
 </root>
