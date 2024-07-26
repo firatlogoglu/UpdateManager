@@ -30,6 +30,7 @@ namespace UpdateManager
         private string path;
         private double FileSize;
         private double Percentage;
+
         public UpdateManagerForm(string urlVersion, string urlGitHubReleases, string urlSHA256)
         {
             InitializeComponent();
@@ -188,7 +189,6 @@ namespace UpdateManager
             this.Load += new System.EventHandler(this.UpdateManagerForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
-
         }
 
         private void Lang()
@@ -278,7 +278,7 @@ namespace UpdateManager
                 else
                 {
                     lblStatus.Text = Localization.Downloaded + " " + "100%" + " " + Localization.TotalSize + $" {string.Format("{0:0.##} KB", FileSize / Percentage)}";
-                    if (Hash.CheckHash(UrlSHA256, path))
+                    if (Hash.CheckHash(UrlSHA256, path, is64BitProcess))
                     {
                         lnkLblOpenFolder.Text = path;
                         lnkLblOpenFolder.Visible = true;
@@ -293,7 +293,6 @@ namespace UpdateManager
                         btnDownloadUpdates.Enabled = false;
                         btnInstallUpdates.Enabled = true;
                     }
-
                 }
             }
             catch (Exception ex)
@@ -304,7 +303,6 @@ namespace UpdateManager
                 btnDownloadUpdates.Enabled = false;
                 btnInstallUpdates.Enabled = true;
             }
-
         }
 
         private void btnInstallUpdates_Click(object sender, EventArgs e)

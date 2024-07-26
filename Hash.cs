@@ -7,9 +7,19 @@ namespace UpdateManager
 {
     internal class Hash
     {
-        internal static bool CheckHash(string UrlSHA256, string path)
+        internal static bool CheckHash(string UrlSHA256, string path, bool Is64BitProcess)
         {
             string hash2;
+
+            if (!Is64BitProcess)
+            {
+                UrlSHA256 += "";
+            }
+            else
+            {
+                UrlSHA256 += "_x64";
+            }
+
             try
             {
                 ServicePointManager.SecurityProtocol = SecurityProtocolType.Tls12;

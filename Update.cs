@@ -25,7 +25,12 @@ namespace UpdateManager
                 WebClient webclient = new WebClient();
                 WebRequest.DefaultWebProxy = null;
                 webclient.Proxy = null;
+
                 var newVersion = webclient.DownloadString(urlVersion);
+                if (newVersion.Contains("\n"))
+                {
+                    newVersion = newVersion.Replace("\n", "");
+                }
 
                 string nwVrsn = newVersion.Replace(".", "");
                 string crntVrsn = ProductVersion.Replace(".", "");
