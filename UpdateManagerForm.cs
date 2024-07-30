@@ -31,13 +31,19 @@ namespace UpdateManager
         private double FileSize;
         private double Percentage;
 
-        public UpdateManagerForm(string urlVersion, string urlGitHubReleases, string urlSHA256)
+        public UpdateManagerForm(string appName, string urlVersion, string urlGitHubReleases, string urlSHA256)
         {
             InitializeComponent();
             lblStatus.Text = "";
             UrlVersion = urlVersion;
             UrlGitHubReleases = urlGitHubReleases;
             UrlSHA256 = urlSHA256;
+
+            if (appName != null && appName != "")
+            {
+                productName = appName;
+            }
+
             Lang();
         }
 
