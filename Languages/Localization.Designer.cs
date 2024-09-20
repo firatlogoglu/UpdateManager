@@ -70,6 +70,15 @@ namespace UpdateManager.Languages {
         }
         
         /// <summary>
+        ///   Güncellemeleri Kontrol Et benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string CheckUpdates_CA {
+            get {
+                return ResourceManager.GetString("CheckUpdates_CA", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Geçerli Sürüm: benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string CurrentVersion {
@@ -142,11 +151,38 @@ namespace UpdateManager.Languages {
         }
         
         /// <summary>
+        ///   Çıkış benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Exit {
+            get {
+                return ResourceManager.GetString("Exit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Kurulum tamamlandı. benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string InstallationCompleted {
+            get {
+                return ResourceManager.GetString("InstallationCompleted", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Güncellemeleri &amp;Kur benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string InstallUpdates {
             get {
                 return ResourceManager.GetString("InstallUpdates", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Güncellemeleri Kur benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string InstallUpdates_CA {
+            get {
+                return ResourceManager.GetString("InstallUpdates_CA", resourceCulture);
             }
         }
         
@@ -214,6 +250,15 @@ namespace UpdateManager.Languages {
         }
         
         /// <summary>
+        ///   Kaldırılıyor: benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Uninstalling {
+            get {
+                return ResourceManager.GetString("Uninstalling", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Güncelleme Yöneticisi benzeri yerelleştirilmiş bir dize arar.
         /// </summary>
         internal static string UpdateManager {
@@ -228,6 +273,15 @@ namespace UpdateManager.Languages {
         internal static string VerificationFileNo {
             get {
                 return ResourceManager.GetString("VerificationFileNo", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Evet benzeri yerelleştirilmiş bir dize arar.
+        /// </summary>
+        internal static string Yes {
+            get {
+                return ResourceManager.GetString("Yes", resourceCulture);
             }
         }
     }

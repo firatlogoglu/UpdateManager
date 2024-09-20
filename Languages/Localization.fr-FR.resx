@@ -120,6 +120,9 @@
   <data name="CheckUpdates" xml:space="preserve">
     <value>Vérifier Les Mises À Jour</value>
   </data>
+  <data name="CheckUpdates_CA" xml:space="preserve">
+    <value>Vérifier Les Mises À Jour</value>
+  </data>
   <data name="CurrentVersion" xml:space="preserve">
     <value>Version Actuelle:</value>
   </data>
@@ -144,7 +147,16 @@
   <data name="ERROR_2" xml:space="preserve">
     <value>ERREUR:</value>
   </data>
+  <data name="Exit" xml:space="preserve">
+    <value>Quitter</value>
+  </data>
+  <data name="InstallationCompleted" xml:space="preserve">
+    <value>Installation terminée.</value>
+  </data>
   <data name="InstallUpdates" xml:space="preserve">
+    <value>Installer les Mises à Jour</value>
+  </data>
+  <data name="InstallUpdates_CA" xml:space="preserve">
     <value>Installer les Mises à Jour</value>
   </data>
   <data name="LastVersion" xml:space="preserve">
@@ -168,10 +180,16 @@
   <data name="TotalSize" xml:space="preserve">
     <value>Taille Totale:</value>
   </data>
+  <data name="Uninstalling" xml:space="preserve">
+    <value>Désinstallation:</value>
+  </data>
   <data name="UpdateManager" xml:space="preserve">
     <value>Gestionnaire de Mise à Jour</value>
   </data>
   <data name="VerificationFileNo" xml:space="preserve">
     <value>Le fichier de vérification n'a pas pu être téléchargé.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Oui</value>
   </data>
 </root>
